@@ -1,6 +1,6 @@
 # Python scripts for parliamentary corpus analysis
 
-This repository contains the Python scripts used for the article's computational workflow. The scripts are organised according to the main stages of the analysis: downloading parliamentary records, extracting or reading textual content from PDF files, counting sittings and words, producing keyword-count datasets, and generating the figures included in the article.
+This repository contains the Python scripts used for the article's computational workflow. The scripts are organised according to the main stages of the analysis: downloading parliamentary records in PDF format, reading textual content from PDF files, counting sittings and words, producing keyword-count datasets, and generating the figures included in the article.
 
 The scripts were developed and executed in **Spyder 6**, using **Python 3.11.11** packaged by **conda-forge**, within an **IPython 8.37.0** interactive environment.
 
@@ -8,16 +8,13 @@ The scripts were developed and executed in **Spyder 6**, using **Python 3.11.11*
 
 ### 1_Downloading_Act_Extract_Txt
 
-This folder contains the scripts used to download parliamentary records and, where necessary, extract text from PDF files.
-
-The workflow includes two operations:
-
-1. automated downloading of PDF files from public parliamentary repositories;
-2. extraction or reading of textual content from the downloaded PDF files.
+This folder contains the scripts used to download parliamentary records in PDF format from the public parliamentary repositories of the Chamber of Deputies and the Senate.
 
 The download scripts generate or read the URLs of the parliamentary sittings, save the PDF files locally with standardised filenames, and create log files documenting the outcome of each request.
 
-Some scripts also convert PDF files into plain-text TXT files. Where necessary, these scripts handle two-column page layouts in order to reconstruct the reading order of the parliamentary records.
+The acquisition procedure was designed as a controlled and incremental form of harvesting. The scripts introduce pauses between requests and proceed through bounded chronological or institutional units, rather than through aggressive or massive simultaneous access.
+
+Some download scripts may also appear in the separate `Camera` and `Senato` folders, which preserve the Chamber- and Senate-specific acquisition scripts used during the workflow.
 
 Main libraries used in this stage include:
 
@@ -27,7 +24,6 @@ Main libraries used in this stage include:
 - `time`
 - `random`
 - `re`
-- `PyMuPDF` / `fitz`
 
 ### 2_Count_Word_Senate_Chamber
 
@@ -60,13 +56,14 @@ These figures visualise the annual distribution of parliamentary activity in the
 - total sittings by year;
 - total words by year.
 
-The graphs were generated from derived yearly datasets using `pandas` and `matplotlib`.
+The graphs were generated from derived yearly datasets using `pandas`, `openpyxl` and `matplotlib`.
 
 Main libraries used in this stage include:
 
 - `pandas`
 - `matplotlib`
 - `openpyxl`
+- `os`
 
 ### 4_Graph_3_4_War_Democracy_Socialism
 
