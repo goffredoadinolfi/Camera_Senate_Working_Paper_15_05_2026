@@ -1,0 +1,7 @@
+# Core libraries used in the parliamentary corpus workflow
+
+pandas
+matplotlib
+openpyxl
+requests
+PyMuPDF
