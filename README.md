@@ -6,7 +6,7 @@ The scripts were developed and executed in **Spyder 6**, using **Python 3.11.11*
 
 ## Repository structure
 
-### 1_Downloading_Act_Extract_Txt
+### 1_Downloading_PDF_Records
 
 This folder contains the scripts used to download parliamentary records in PDF format from the public parliamentary repositories of the Chamber of Deputies and the Senate.
 
