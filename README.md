@@ -2,6 +2,8 @@
 
 This repository contains the Python scripts used for the article's computational workflow. The scripts are organised according to the main stages of the analysis: downloading parliamentary records in PDF format, reading textual content from PDF files, counting sittings and words, producing keyword-count datasets, and generating the figures included in the article.
 
+The parliamentary records used in this study are institutional materials of the Chamber of Deputies and the Senate and are publicly available for consultation and use through their official websites. However, since it is not entirely clear whether the full corpus may be redistributed by third parties through a public repository, the downloaded database of sittings has not been included in the GitHub repository. For reasons of caution, the repository provides the Python scripts, derived datasets and figures used in the article, while the original records remain accessible from the official institutional sources, subject to their continued availability and current access conditions.
+
 The scripts were developed and executed in **Spyder 6**, using **Python 3.11.11** packaged by **conda-forge**, within an **IPython 8.37.0** interactive environment.
 
 ## Repository structure
